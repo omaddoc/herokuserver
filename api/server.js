@@ -9,7 +9,7 @@ server.use(helmet());
 server.use(express.json());
 
 server.get('/', (req, res) => {
-  res.send(`Hello World! - Running Port: ${port}`);
+  res.send(`Hello FSW14! Running Port: ${port}`);
 });
 
 server.get('/api/notes', async (req, res) => {
