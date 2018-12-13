@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
     tbl.increments();
 
     tbl.string('title', 128).notNullable();
-    tbl.string('description', 255);
+    tbl.string('textBody', 255);
 
     tbl.boolean('complete').defaultTo(0);
   });
