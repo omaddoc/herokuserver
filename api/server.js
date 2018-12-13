@@ -4,9 +4,13 @@ const helmet = require('helmet');
 const knex = require('../db/config.js');
 
 const server = express();
-
+const port = process.env.PORT || 8000;
 server.use(helmet());
 server.use(express.json());
+
+server.get('/', (req, res) => {
+  res.send(`Running Port: ${port}`);
+});
 
 server.get('/api/notes', async (req, res) => {
   knex('notes')
